@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CI/CD Task Submission</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .glow {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #38bdf8;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.2);
+      animation: float 10s infinite linear;
+    }
+
+    .circle:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 10%;
+      left: 20%;
+    }
+
+    .circle:nth-child(2) {
+      width: 120px;
+      height: 120px;
+      bottom: 15%;
+      right: 15%;
+      animation-duration: 14s;
+    }
+
+    .circle:nth-child(3) {
+      width: 60px;
+      height: 60px;
+      bottom: 25%;
+      left: 10%;
+      animation-duration: 12s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <div class="container">
+    <h1>Hello 👋</h1>
+    <p>This is a CI/CD Task Submission</p>
+    <div class="glow">🚀 Pipeline Executed Successfully</div>
+  </div>
+</body>
+</html>
